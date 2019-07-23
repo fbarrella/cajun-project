@@ -1,0 +1,8 @@
+{
+  "name": "cajun-landing",
+  "version": "1.0.0",
+  "description": "Cajun Landing Page",
+  "main": "index.js",
+  "author": "Felipe B. Netto",
+  "license": "MIT"
+}
