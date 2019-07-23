@@ -1,5 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
+const Webpack = require('webpack');
 
 module.exports = {
     entry: path.resolve(__dirname, 'src', 'index.js'),
@@ -39,5 +39,12 @@ module.exports = {
     devServer: {
         contentBase: './src',
         publicPath: '/output'
-    }
+    },
+    plugins: [
+        new Webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        }),
+    ],
 };
