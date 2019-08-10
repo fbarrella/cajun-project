@@ -133,3 +133,21 @@ header .menu-second a:hover {
 .carousel-content.third::after {
     background-image: url("../assets/melhor-remedio.jpg");
 }
+
+#como-funciona {
+    text-align: center;
+}
+
+#como-funciona.steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#como-funciona.steps.step::before {
+    content: "ASBKABSKJABS";
+    width: 24px;
+    height: 24px;
+    background-color: #D8322D;
+}
