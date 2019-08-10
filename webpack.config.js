@@ -1,5 +1,6 @@
 const path = require('path');
 const Webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, 'src', 'index.js'),
@@ -24,15 +25,11 @@ module.exports = {
             },
             {
                 test: /\.s?css$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'sass-loader'
-                ]
+                use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             { test: /\.png$/, loader: "url-loader?mimetype=image/png" },
             { test: /\.jpe?g$/, loader: "url-loader?mimetype=image/jpeg" },
-            { test: /\.gif$/, loader: "url-loader?mimetype=image/gif" },        
+            { test: /\.gif$/, loader: "url-loader?mimetype=image/gif" },
         ]
     },
     devServer: {
@@ -44,6 +41,9 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery'
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'general.css',
         }),
     ],
 };
