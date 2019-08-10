@@ -5,30 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cajun</title>
 
-    <style>
-        .carousel-content{
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.8.95/css/materialdesignicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
+    <title>Cajun</title>
 </head>
 
 <body>
     <header>
-        <div id="logo">Logotipo</div>
-        <div id="menu">
-            <a href="#">Quem Somos</a>
+        <div class="menu-first">
+            <a href="#" class="logotipo">
+                <img src="./assets/cajun-logo.png" alt="Logotipo Cajun">
+            </a>
+            <a href="#" class="open-menu">
+                <span class="mdi mdi-menu"></span>
+            </a>
+        </div>
+        <div class="menu-second">
+            <a href="#faq-list">Quem Somos</a>
             <a href="#como-funciona">Como Funciona</a>
-            <a href="#">Quero Participar</a>
+            <a href="#quero-participar">Quero Participar</a>
         </div>
     </header>
 
     <section id="carousel">
         <div class="owl-carousel owl-theme">
-            <div class="carousel-content">Fazer música juntos nunca foi tão fácil</div>
-            <div class="carousel-content">Melhor que tocar sozinho em casa</div>
-            <div class="carousel-content">O melhor remédio depois de uma semana estressante</div>
+            <div class="carousel-content first">Fazer música juntos nunca foi tão fácil</div>
+            <div class="carousel-content second">Melhor que tocar sozinho em casa</div>
+            <div class="carousel-content third">O melhor remédio depois de uma semana estressante</div>
         </div>
     </section>
 
