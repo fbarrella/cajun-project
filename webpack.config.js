@@ -3,7 +3,7 @@ const Webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname, 'src', 'index.js'),
+    entry: path.resolve(__dirname, 'index.js'),
     output: {
         path: path.resolve(__dirname, 'output'),
         filename: 'bundle.js'
@@ -33,7 +33,7 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: './src',
+        // contentBase: './src',
         publicPath: '/output'
     },
     plugins: [
