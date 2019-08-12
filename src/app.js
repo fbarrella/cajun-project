@@ -1,11 +1,4 @@
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import 'owl.carousel';
-import './style/base.css';
 import * as _ from 'lodash';
-import './assets/melhor-que-tocar-sozinho.jpg';
-import './assets/melhor-remedio.jpg';
-import './assets/musica-juntos.jpg';
 
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
@@ -38,4 +31,8 @@ function setSticky() {
     } else {
       navbar.classList.remove("sticky");
     }
+}
+
+function preventDefault(e) {
+    e.preventDefault();
 }
