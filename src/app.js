@@ -1,5 +1,10 @@
 import * as _ from 'lodash';
 
+let openMenuBtn = document.querySelector('.open-menu');
+let secondMenu = document.querySelector('.menu-second');
+let navbar = document.querySelector('header');
+let sticky = navbar.offsetTop;
+
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         center: true,
@@ -8,9 +13,6 @@ $(document).ready(function () {
         dots: true
     });
 });
-
-let openMenuBtn = document.querySelector('.open-menu');
-let secondMenu = document.querySelector('.menu-second');
 
 openMenuBtn.addEventListener("click", () => {
     let secondMenuStatus = secondMenu.style.display;
@@ -42,8 +44,6 @@ function closeMenu (menu) {
 window.onscroll = function() {
     setSticky();
 };
-let navbar = document.querySelector('header');
-let sticky = navbar.offsetTop;
 
 function setSticky() {
     if (window.pageYOffset >= sticky) {
