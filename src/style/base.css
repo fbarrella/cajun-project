@@ -74,12 +74,12 @@ header .menu-second a {
     text-align: center;
     text-decoration: none;
     color: aliceblue;
-    background-color: rgb(216, 50, 45);
+    background-color: rgb(165, 25, 20);
     transition: 0.2s linear;
 }
 
 header .menu-second a:hover {
-    background-color: rgb(150, 29, 25);
+    background-color: rgb(112, 11, 8);
 }
 
 .sticky {
@@ -143,19 +143,47 @@ header .menu-second a:hover {
 }
 
 #como-funciona {
+    padding: 65px 0px;
     text-align: center;
+    color: white;
+    background-color: #D8322D;
+    box-shadow: inset rgba(0, 0, 0, 0.3) 0px 0px 10px 3px;
 }
 
-#como-funciona.steps {
+#como-funciona h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+#como-funciona .steps {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    text-align: left;
+    padding: 0 20px;
 }
 
-#como-funciona.steps.step::before {
-    content: "ASBKABSKJABS";
-    width: 24px;
-    height: 24px;
-    background-color: #D8322D;
+#como-funciona .steps li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px auto;
+    width: 100%;
+}
+
+#como-funciona .steps li .bullet {
+    min-width: 25px;
+    min-height: 25px;
+    color: #D8322D;
+    background-color: white;
+    border-radius: 50%;
+    font-weight: 600;
+    text-align: center;
+    margin-right: 15px;
+}
+
+#como-funciona .steps li p {
+    font-size: 16px;
+    text-align: left;
 }
