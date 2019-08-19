@@ -4,6 +4,24 @@ let openMenuBtn = document.querySelector('.open-menu');
 let secondMenu = document.querySelector('.menu-second');
 let navbar = document.querySelector('header');
 let sticky = navbar.offsetTop;
+let faqItem = document.querySelectorAll('.faq');
+let falseClick = true;
+
+faqItem.forEach(item => {
+    let itemDesc = item.querySelector('p');
+
+    item.addEventListener('click', () => {
+        if(item.classList.contains("open")){
+            item.classList.remove("open");
+            itemDesc.style.display = "none";
+        }else{
+            _.map(faqItem, resetFaqItems);
+            window.scrollTo(0, item.offsetTop - (window.innerHeight/3));
+            item.classList.add("open");
+            itemDesc.style.display = "block";
+        }
+    });
+});
 
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
@@ -19,26 +37,40 @@ openMenuBtn.addEventListener("click", () => {
     triggerOpenAndCloseMenu(secondMenuStatus, secondMenu);
 });
 
-secondMenu.querySelectorAll('a').forEach(item => {
-    item.addEventListener("click", () => {
-        closeMenu(secondMenu);
-    });
-});
+function resetFaqItems (item) {
+    let itemDesc = item.querySelector('p');
+
+    if(item.classList.contains("open")){
+        item.classList.remove("open");
+        itemDesc.style.display = "none";
+    }
+}
 
 function triggerOpenAndCloseMenu (status, menu) {
-    if(_.isEqual(status, "flex")){
-        closeMenu(menu);
-    }else{
+    if(!_.isEqual(status, "flex")){
         openMenu(menu);
     }
 }
 
+function closeMenuByWindowClick (e) {
+    if(falseClick){
+        falseClick = false;
+    }else{
+        closeMenu(secondMenu);
+        falseClick = true;
+    }
+}
+
 function openMenu (menu) {
+    console.log("abriu");
     menu.style.display = "flex";
+    window.addEventListener('click', closeMenuByWindowClick);
 }
 
 function closeMenu (menu) {
+    console.log("fechou");
     menu.style.display = "none";
+    window.removeEventListener('click', closeMenuByWindowClick);
 }
 
 window.onscroll = function() {
