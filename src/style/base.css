@@ -142,8 +142,17 @@ header .menu-second a:hover {
     background-image: url("../assets/melhor-remedio.jpg");
 }
 
+#como-funciona::before {
+    display: block;
+    height: 59px;
+    content: " ";
+    background-color: black;
+    margin-bottom: 40px;
+}
+
 #como-funciona {
-    padding: 65px 0px;
+    margin-top: -59px;
+    padding-bottom: 40px;
     text-align: center;
     color: white;
     background-color: #D8322D;
@@ -186,4 +195,58 @@ header .menu-second a:hover {
 #como-funciona .steps li p {
     font-size: 16px;
     text-align: left;
+}
+
+#faq-list {
+    margin-top: -59px;
+    padding: 100px 0px 40px 0px;
+    color: #D8322D;
+}
+
+#faq-list h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#faq-list .faq {
+    border: solid 1px #D8322D;
+    border-radius: 3px;
+    padding: 15px 10px;
+    margin: 15px 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 6px 2px rgb(238, 238, 238);
+    transition: linear 0.2s;
+}
+
+#faq-list .faq.open {
+    margin: 15px 15px;
+    box-shadow: 0px 0px 6px 2px rgb(214, 210, 210);
+}
+
+#faq-list .faq p {
+    margin-top: 10px;
+    display: none;
+}
+
+#faq-list .faq.open p {
+    display: block;
+}
+
+#faq-list .faq h3 {
+    position: relative;
+    padding-right: 25px;
+}
+
+#faq-list .faq h3::before {
+    display: block;
+    font-family: 'Material Design Icons';
+    content: "\F625";
+    position: absolute;
+    right: 5px;
+    top: 10%;
+}
+
+#faq-list .faq.open h3::before {
+    content: "\F377";
 }
