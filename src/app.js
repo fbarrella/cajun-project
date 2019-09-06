@@ -6,6 +6,13 @@ let navbar = document.querySelector('header');
 let sticky = navbar.offsetTop;
 let faqItem = document.querySelectorAll('.faq');
 let falseClick = true;
+let sendMessageBtn = document.querySelector('.send-message');
+
+sendMessageBtn.addEventListener('click', ()=>{
+    let url = "https://api.whatsapp.com/send?phone=5511963499907";
+    let messageText = "&text=Oi,%20gostaria%20de%20participar%20do%20pr%C3%B3ximo%20evento%20do%20Cajun%20em%20peru%C3%ADbe";
+    window.open(url + messageText, '_blank');
+});
 
 faqItem.forEach(item => {
     let itemDesc = item.querySelector('p');
@@ -62,25 +69,34 @@ function closeMenuByWindowClick (e) {
 }
 
 function openMenu (menu) {
-    console.log("abriu");
     menu.style.display = "flex";
     window.addEventListener('click', closeMenuByWindowClick);
 }
 
 function closeMenu (menu) {
-    console.log("fechou");
     menu.style.display = "none";
     window.removeEventListener('click', closeMenuByWindowClick);
 }
 
 window.onscroll = function() {
     setSticky();
+    setScrolledMenu();
 };
 
 function setSticky() {
     if (window.pageYOffset >= sticky) {
-      navbar.classList.add("sticky")
+      navbar.classList.add("sticky");
     } else {
       navbar.classList.remove("sticky");
+    }
+}
+
+function setScrolledMenu() {
+    if (window.pageYOffset >= (sticky + 15)) {
+        navbar.classList.add("scrolled-menu");
+    } else {
+        if(navbar.classList.contains("scrolled-menu")){
+            navbar.classList.remove("scrolled-menu");
+        }
     }
 }

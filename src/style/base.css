@@ -22,6 +22,7 @@ header .menu-first{
     background-color: #D8322D;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 999;
+    position: relative;
 }
 
 header .menu-first .logotipo {
@@ -31,6 +32,7 @@ header .menu-first .logotipo {
     align-items: center;
     width: 100%;
     height: 100%;
+    position: absolute;
 }
 
 header .menu-first .logotipo a {
@@ -56,6 +58,7 @@ header .menu-first .open-menu {
     background: none;
     border: none;
     cursor: pointer;
+    position: relative;
 }
 
 header .menu-second {
@@ -81,6 +84,18 @@ header .menu-second a {
 
 header .menu-second a:hover {
     background-color: rgb(112, 11, 8);
+}
+
+.scrolled-menu .menu-first {
+    background-color: rgba(255, 255, 255, 0.97) !important;
+}
+
+.scrolled-menu img {
+    filter: unset !important;
+}
+
+.scrolled-menu .open-menu {
+    color: #D8322D !important;
 }
 
 .sticky {
@@ -251,4 +266,51 @@ header .menu-second a:hover {
 
 #faq-list .faq.open h3::before {
     content: "\F377";
+}
+
+#quero-participar {
+    text-align: center;
+    background-color: #D8322D;
+    border-radius: 4px;
+    padding: 20px 10px;
+    margin: 0 20px;
+    box-shadow: 0px 0px 6px 2px rgb(214, 210, 210);
+}
+
+#quero-participar .intro-text {
+    color: white;
+    text-align: left;
+    margin-bottom: 25px;
+    padding: 0 15px;
+}
+
+#quero-participar .intro-text h1 {
+    margin-bottom: 15px;
+}
+
+#quero-participar .send-message {
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #128c7e;
+    background-color: white;
+    padding: 10px;
+    font-size: 15px;
+    /* font-weight: 600; */
+    transition: linear 0.2s;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.3);
+}
+
+#quero-participar .send-message:hover {
+    color: rgb(233, 220, 220);
+    background-color: #075e54;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 25px 0;
+    text-align: center;
+    color: white;
+    background-color: #D8322D;
+    box-shadow: 0px 0px 6px 2px rgb(214, 210, 210);
 }

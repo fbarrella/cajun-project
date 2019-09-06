@@ -5,4 +5,5 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import 'owl.carousel';
 import './src/style/base.css';
+import './src/style/material-inputs.scss';
 import './src/app';
