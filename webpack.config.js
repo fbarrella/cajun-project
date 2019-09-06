@@ -33,7 +33,6 @@ module.exports = {
         ]
     },
     devServer: {
-        // contentBase: './src',
         publicPath: '/output'
     },
     plugins: [
