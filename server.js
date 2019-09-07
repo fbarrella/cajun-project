@@ -12,3 +12,7 @@ app.listen(port, () => {
 app.get('/', (req, res)=>{
   return res.sendFile(path.resolve('index.html'));
 });
+
+app.get('/zohoverify/verifyforzoho.html', (req, res)=>{
+  return res.sendFile(path.resolve('verifyforzoho.html'));
+});
