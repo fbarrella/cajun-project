@@ -216,7 +216,8 @@ header .menu-second a:hover {
 #faq-list {
     margin-top: -59px;
     padding: 100px 0px 40px 0px;
-    color: #D8322D;
+    /* color: #D8322D; */
+    color: rgb(3, 3, 32);
 }
 
 #faq-list h1 {
@@ -226,7 +227,8 @@ header .menu-second a:hover {
 }
 
 #faq-list .faq {
-    border: solid 1px #D8322D;
+    /* border: solid 1px #D8322D; */
+    border: solid 1px rgb(3, 3, 32);
     border-radius: 3px;
     padding: 15px 10px;
     margin: 15px 20px;
@@ -258,7 +260,7 @@ header .menu-second a:hover {
 #faq-list .faq h3::before {
     display: block;
     font-family: 'Material Design Icons';
-    content: "\F625";
+    content: "\F419";
     position: absolute;
     right: 5px;
     top: 10%;
