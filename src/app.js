@@ -69,13 +69,25 @@ function closeMenuByWindowClick (e) {
 }
 
 function openMenu (menu) {
+    switchMenuBtnIcon();
     menu.style.display = "flex";
     window.addEventListener('click', closeMenuByWindowClick);
 }
 
 function closeMenu (menu) {
+    switchMenuBtnIcon();
     menu.style.display = "none";
     window.removeEventListener('click', closeMenuByWindowClick);
+}
+
+function switchMenuBtnIcon () {
+    let icon = openMenuBtn.querySelector('span');
+
+    if(icon.classList.contains('mdi-menu')){
+        icon.classList.replace('mdi-menu', 'mdi-close');
+    }else{
+        icon.classList.replace('mdi-close', 'mdi-menu');
+    }
 }
 
 window.onscroll = function() {
