@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.15",
     "owl.carousel": "^2.3.4"
   },
